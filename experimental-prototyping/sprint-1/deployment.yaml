@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sprint-1-prototype
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sprint-1-prototype
+  template:
+    metadata:
+      labels:
+        app: sprint-1-prototype
+    spec:
+      containers:
+        - name: sprint-1-prototype
+          image: registry.hub.docker.com/cong42/test-1:latest
