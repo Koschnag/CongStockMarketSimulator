@@ -1,0 +1,34 @@
+@startuml
+package "startseite" {
+  package "startseite-frontend" {
+    [index.html]
+    [app.js]
+    [Dockerfile]
+  }
+  package "startseite-backend" {
+    package "startseite-controllers" {
+      [StartseiteController.php]
+    }
+    package "startseite-models" {
+      [ExampleModel.php]
+    }
+    package "startseite-repositories" {
+      [IExampleRepository.php]
+      [ExampleRepository.php]
+    }
+    package "startseite-services" {
+      [ExampleService.php]
+    }
+    package "startseite-unitofwork" {
+      [IUnitOfWork.php]
+      [UnitOfWork.php]
+    }
+    package "startseite-tests" {
+      [ExampleServiceTest.php]
+    }
+    [index.php]
+    [composer.json]
+    [Dockerfile]
+  }
+}
+@enduml

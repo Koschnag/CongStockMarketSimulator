@@ -1,0 +1,34 @@
+@startuml
+package "learning-program" {
+  package "learning-frontend" {
+    [index.html]
+    [app.js]
+    [Dockerfile]
+  }
+  package "learning-backend" {
+    package "learning-controllers" {
+      [LearningController.php]
+    }
+    package "learning-models" {
+      [Lesson.php]
+    }
+    package "learning-repositories" {
+      [ILessonRepository.php]
+      [LessonRepository.php]
+    }
+    package "learning-services" {
+      [LearningService.php]
+    }
+    package "learning-unitofwork" {
+      [IUnitOfWork.php]
+      [UnitOfWork.php]
+    }
+    package "learning-tests" {
+      [LearningServiceTest.php]
+    }
+    [index.php]
+    [composer.json]
+    [Dockerfile]
+  }
+}
+@enduml

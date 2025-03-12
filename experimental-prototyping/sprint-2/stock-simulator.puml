@@ -1,0 +1,34 @@
+@startuml
+package "stock-simulation" {
+  package "stock-frontend" {
+    [index.html]
+    [app.js]
+    [Dockerfile]
+  }
+  package "stock-backend" {
+    package "stock-controllers" {
+      [StockController.php]
+    }
+    package "stock-models" {
+      [Stock.php]
+    }
+    package "stock-repositories" {
+      [IStockRepository.php]
+      [StockRepository.php]
+    }
+    package "stock-services" {
+      [StockService.php]
+    }
+    package "stock-unitofwork" {
+      [IUnitOfWork.php]
+      [UnitOfWork.php]
+    }
+    package "stock-tests" {
+      [StockServiceTest.php]
+    }
+    [index.php]
+    [composer.json]
+    [Dockerfile]
+  }
+}
+@enduml

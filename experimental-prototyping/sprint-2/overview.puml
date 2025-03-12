@@ -1,0 +1,37 @@
+@startuml
+package "project-root" {
+  package "startseite" {
+    package "startseite-frontend" {
+      [Frontend]
+    }
+    package "startseite-backend" {
+      [Backend]
+    }
+  }
+  package "auth-service" {
+    package "auth-frontend" {
+      [Frontend]
+    }
+    package "auth-backend" {
+      [Backend]
+    }
+  }
+  package "stock-simulation" {
+    package "stock-frontend" {
+      [Frontend]
+    }
+    package "stock-backend" {
+      [Backend]
+    }
+  }
+  package "learning-program" {
+    package "learning-frontend" {
+      [Frontend]
+    }
+    package "learning-backend" {
+      [Backend]
+    }
+  }
+  [docker-compose.yml]
+}
+@enduml

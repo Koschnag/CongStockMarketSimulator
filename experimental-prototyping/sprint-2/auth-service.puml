@@ -1,0 +1,34 @@
+@startuml
+package "auth-service" {
+  package "auth-frontend" {
+    [index.html]
+    [app.js]
+    [Dockerfile]
+  }
+  package "auth-backend" {
+    package "auth-controllers" {
+      [AuthController.php]
+    }
+    package "auth-models" {
+      [User.php]
+    }
+    package "auth-repositories" {
+      [IUserRepository.php]
+      [UserRepository.php]
+    }
+    package "auth-services" {
+      [AuthService.php]
+    }
+    package "auth-unitofwork" {
+      [IUnitOfWork.php]
+      [UnitOfWork.php]
+    }
+    package "auth-tests" {
+      [AuthServiceTest.php]
+    }
+    [index.php]
+    [composer.json]
+    [Dockerfile]
+  }
+}
+@enduml
