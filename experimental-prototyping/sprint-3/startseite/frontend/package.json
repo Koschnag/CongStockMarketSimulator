@@ -1,0 +1,11 @@
+{
+  "name": "cong-bank-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "http-server ./src"
+  },
+  "dependencies": {
+    "knockout": "^3.5.1",
+    "http-server": "^0.12.3"
+  }
+}
